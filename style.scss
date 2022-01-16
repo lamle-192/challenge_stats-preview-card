@@ -1,0 +1,99 @@
+$highlightColor: hsl(277, 64%, 61%);
+$textColor: white;
+$mainBackground: hsl(233, 47%, 7%);
+$cardBackground: hsl(244, 38%, 16%);
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    color: $textColor;
+    background-color: $mainBackground;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    height:100vh;
+    @include flexCenter();
+    
+}
+article{
+    border-radius: 10px;
+    background-color: $cardBackground;   
+    display: table;
+    max-width: 1110px;
+    margin: 0 auto;
+    overflow: hidden;
+    .content, .featured-img{
+        width: 50%;
+        display: table-cell;
+    }
+    .content{
+        padding:80px;
+    }
+    h1{
+        font-size: 36px;
+        margin-top: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;        
+    }
+    h1 span.highlight{
+        color: $highlightColor;    
+        display: inline;
+    }
+    p{
+        opacity: .8;
+        line-height: 25px;
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+    }
+    .facts{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        text-transform: uppercase;
+        margin-top: 80px;
+    }
+    .facts > div{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+    }
+    .fact-no{
+        font-size: 24px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+    }
+    .fact-title{
+        font-size: 12px;
+        opacity: .8;
+        letter-spacing: 1px;
+    }
+    .featured-img{
+        background:url(./images/image-header-desktop.jpg);
+        position: relative;
+        z-index: 0;
+        background-size: cover;
+    }
+    .featured-img::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: $highlightColor;        
+        mix-blend-mode: multiply;
+    }
+}
+.attribution{
+    margin-top: 80px;
+    text-align: center;
+    font-size: 13px;
+    display: block;
+    max-width: 1110px;
+    color: rgb(241, 241, 241);
+}

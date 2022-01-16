@@ -1,0 +1,125 @@
+body {
+  color: white;
+  background-color: #090b1a;
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+article {
+  border-radius: 10px;
+  background-color: #1b1938;
+  display: table;
+  max-width: 1110px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+article .content, article .featured-img {
+  width: 50%;
+  display: table-cell;
+}
+
+article .content {
+  padding: 80px;
+}
+
+article h1 {
+  font-size: 36px;
+  margin-top: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+article h1 span.highlight {
+  color: #aa5cdb;
+  display: inline;
+}
+
+article p {
+  opacity: .8;
+  line-height: 25px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+article .facts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  text-transform: uppercase;
+  margin-top: 80px;
+}
+
+article .facts > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+article .fact-no {
+  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+article .fact-title {
+  font-size: 12px;
+  opacity: .8;
+  letter-spacing: 1px;
+}
+
+article .featured-img {
+  background: url(./images/image-header-desktop.jpg);
+  position: relative;
+  z-index: 0;
+  background-size: cover;
+}
+
+article .featured-img::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #aa5cdb;
+  mix-blend-mode: multiply;
+}
+
+.attribution {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 13px;
+  display: block;
+  max-width: 1110px;
+  color: #f1f1f1;
+}
+/*# sourceMappingURL=style.css.map */
