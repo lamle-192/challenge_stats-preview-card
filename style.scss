@@ -89,11 +89,51 @@ article{
         mix-blend-mode: multiply;
     }
 }
-.attribution{
-    margin-top: 80px;
+.attribution {
+    margin-top: 30px;
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     display: block;
     max-width: 1110px;
-    color: rgb(241, 241, 241);
+    color: #f1f1f1;
+}
+@media(min-width:768px){
+    .attribution{
+        display: none;
+    }
+}
+@media (max-width:768px){
+    body{
+        padding:20px
+    }
+    article {
+        max-width: unset;
+        flex-direction:column-reverse;
+        display: flex;
+        width: 100%;
+        .content{
+            padding:30px;
+            text-align: center;
+            display: block!important;
+            width: unset;
+        }
+        h1{
+            font-size: 24px;
+        }
+        .facts {
+            display: block!important;
+            width: 100%;
+            margin-top:50px
+        }
+        .facts > div {
+            margin-bottom: 20px;
+        }
+        .featured-img{
+            display: block!important;
+            width: 100%!important;
+            min-height: 230px;
+        }
+    }    
+    
+    
 }
